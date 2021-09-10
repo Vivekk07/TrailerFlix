@@ -18,6 +18,7 @@ jobs:
       - name: install dependencies
         run: yarn
       - name: deploy
-        run: git config --global user.email "k.vivekk07@gmail.com"
-        run: git confit --global user.name "Vivekk07"
-        run: yarn run deploy
+        run: |
+          git config --global user.email "k.vivekk07@gmail.com"
+          git confit --global user.name "Vivekk07"
+          yarn run deploy
