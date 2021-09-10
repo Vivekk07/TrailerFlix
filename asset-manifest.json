@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TrailerFlix/static/css/main.4b851b96.chunk.css",
+    "main.js": "/TrailerFlix/static/js/main.c1fd0d76.chunk.js",
+    "main.js.map": "/TrailerFlix/static/js/main.c1fd0d76.chunk.js.map",
+    "runtime-main.js": "/TrailerFlix/static/js/runtime-main.8c8b6cd2.js",
+    "runtime-main.js.map": "/TrailerFlix/static/js/runtime-main.8c8b6cd2.js.map",
+    "static/js/2.85cba985.chunk.js": "/TrailerFlix/static/js/2.85cba985.chunk.js",
+    "static/js/2.85cba985.chunk.js.map": "/TrailerFlix/static/js/2.85cba985.chunk.js.map",
+    "static/js/3.95debcd0.chunk.js": "/TrailerFlix/static/js/3.95debcd0.chunk.js",
+    "static/js/3.95debcd0.chunk.js.map": "/TrailerFlix/static/js/3.95debcd0.chunk.js.map",
+    "index.html": "/TrailerFlix/index.html",
+    "static/css/main.4b851b96.chunk.css.map": "/TrailerFlix/static/css/main.4b851b96.chunk.css.map",
+    "static/js/2.85cba985.chunk.js.LICENSE.txt": "/TrailerFlix/static/js/2.85cba985.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c8b6cd2.js",
+    "static/js/2.85cba985.chunk.js",
+    "static/css/main.4b851b96.chunk.css",
+    "static/js/main.c1fd0d76.chunk.js"
+  ]
+}
