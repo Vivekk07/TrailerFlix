@@ -32,8 +32,11 @@ const Row = (props) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "")
+      movieTrailer(movie?.name || movie?.title || movie?.original_name || "")
         .then((url) => {
+          console.log(url);
+          console.table(movie);
+          console.log(movie?.name);
           const urlVar = new URL(url);
           const urlParams = new URLSearchParams(urlVar.search);
           setTrailerUrl(urlParams.get("v"));
@@ -51,19 +54,22 @@ const Row = (props) => {
       <h2>{props.title}</h2>
 
       <div className={style.row__posters}>
-        {movies.map((movie) => (
-          <img
-            key={movie.id}
-            onClick={() => handleClick(movie)}
-            className={`${style.row__poster} ${
-              props.isLargeRow && style.row__posterLarge
-            }`}
-            src={`${base_url}${
-              props.isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie.title}
-          ></img>
-        ))}
+        {movies.map(
+          (movie) =>
+            movie.backdrop_path && (
+              <img
+                key={movie.id}
+                onClick={() => handleClick(movie)}
+                className={`${style.row__poster} ${
+                  props.isLargeRow && style.row__posterLarge
+                }`}
+                src={`${base_url}${
+                  props.isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie.title}
+              ></img>
+            )
+        )}
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
