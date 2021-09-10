@@ -19,6 +19,11 @@ jobs:
         run: yarn
       - name: deploy
         run: |
-          git config --global user.email "k.vivekk07@gmail.com"
-          git config --global user.name "Vivekk07"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git config --global user.email "${USER_EMAIL}"
+          git config --global user.name "${USER_NAME}"
           yarn run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
